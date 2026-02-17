@@ -74,8 +74,8 @@ Publishing those details would increase risk (misuse, prompt/guardrail bypass at
 
 ## 🧩 Repository layout
 
-```
-agentic-ai-project-showcase/
+```text
+jurissearch-agentic-ai-showcase/
 ├── README.md
 ├── docs/
 │   ├── overview.md
@@ -84,7 +84,8 @@ agentic-ai-project-showcase/
 │   ├── workflows.md
 │   ├── security-governance.md
 │   ├── compliance-mapping.md
-│   └── limitations.md
+│   ├── limitations.md
+│   └── diagrams.md
 ├── diagrams/
 │   ├── system-architecture.mmd
 │   ├── agent-orchestration.mmd
@@ -109,27 +110,27 @@ agentic-ai-project-showcase/
 
 ## 🏗 Start here (fast path)
 
-1. **System overview:** `docs/overview.md`  
-2. **Architecture (no code):** `docs/architecture.md`  
-3. **Agents & decision boundaries:** `docs/agent-design.md`  
-4. **End-to-end workflows:** `docs/workflows.md`  
-5. **Security & governance:** `docs/security-governance.md`  
-6. **Compliance mapping:** `docs/compliance-mapping.md`  
-7. **Limitations & guardrails:** `docs/limitations.md`  
-8. **Behavior demos (mocked):** `demos/`  
-9. **Audit posture & metrics:** `evidence/`  
-10. **Roadmap:** `roadmap/`
+1. **System overview:** [docs/overview.md](docs/overview.md)  
+2. **Architecture (no code):** [docs/architecture.md](docs/architecture.md)  
+3. **Agents & decision boundaries:** [docs/agent-design.md](docs/agent-design.md)  
+4. **End-to-end workflows:** [docs/workflows.md](docs/workflows.md)  
+5. **Security & governance:** [docs/security-governance.md](docs/security-governance.md)  
+6. **Compliance mapping:** [docs/compliance-mapping.md](docs/compliance-mapping.md)  
+7. **Limitations & guardrails:** [docs/limitations.md](docs/limitations.md)  
+8. **Behavior demos (mocked):** [demos](demos/)  
+9. **Audit posture & metrics:** [evidence](evidence/)  
+10. **Roadmap:** [roadmap](roadmap/)
 
 ---
 
 ## 🖼 Diagrams
 
-Diagrams are stored as **Mermaid** (`.mmd`) so GitHub can render them and you can export them to PNG if desired.
-
-- `diagrams/system-architecture.mmd`
-- `diagrams/agent-orchestration.mmd`
-- `diagrams/data-flow.mmd`
-- `diagrams/trust-boundary.mmd`
+- **Viewable diagram previews (Mermaid-rendered in GitHub):** [docs/diagrams.md](docs/diagrams.md)
+- **Editable Mermaid sources:**
+  - [diagrams/system-architecture.mmd](diagrams/system-architecture.mmd)
+  - [diagrams/agent-orchestration.mmd](diagrams/agent-orchestration.mmd)
+  - [diagrams/data-flow.mmd](diagrams/data-flow.mmd)
+  - [diagrams/trust-boundary.mmd](diagrams/trust-boundary.mmd)
 
 Tip: Many teams export Mermaid diagrams to PNG in CI for docs portals; this repo keeps them editable.
 
@@ -137,7 +138,7 @@ Tip: Many teams export Mermaid diagrams to PNG in CI for docs portals; this repo
 
 ## 🧪 Demo behavior (safe / redacted)
 
-See `demos/demo-scenarios.md` and `demos/sample-input-output.md`.
+See [demos/demo-scenarios.md](demos/demo-scenarios.md) and [demos/sample-input-output.md](demos/sample-input-output.md).
 
 ✅ Included:
 - redacted scenarios
@@ -154,12 +155,11 @@ See `demos/demo-scenarios.md` and `demos/sample-input-output.md`.
 
 ## 🛡 Security disclosure
 
-See `SECURITY.md`.  
+See [SECURITY.md](SECURITY.md).  
 **Please do not open public vulnerability reports** for the private production system here.
 
 ---
 
 ## 📜 License
 
-This public showcase repository is licensed under MIT (see `LICENSE`).
-
+This public showcase repository is licensed under MIT (see [LICENSE](LICENSE)).
