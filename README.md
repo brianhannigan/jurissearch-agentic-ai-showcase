@@ -1,1 +1,0 @@
-# jurissearch-agentic-ai-showcase
