@@ -1,0 +1,5 @@
+{
+  "name": "JurisSearch: Legal Case Explorer",
+  "description": "A professional legal research tool powered by Gemini to find and summarize public, non-paywalled legal case studies across any topic, categorized by favorable and unfavorable outcomes.",
+  "requestFramePermissions": []
+}
