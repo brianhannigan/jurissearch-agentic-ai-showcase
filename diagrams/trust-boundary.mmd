@@ -1,0 +1,26 @@
+```mermaid
+flowchart LR
+  subgraph Zone1[Trust Zone 1: User Edge]
+    U[User] --> UI[UI / API Gateway]
+  end
+
+  subgraph Zone2[Trust Zone 2: Core Runtime]
+    UI --> ORCH[Orchestrator]
+    ORCH --> AGENTS[Agent Runtime]
+    ORCH --> POL[Policy Engine]
+    ORCH --> AUD[Audit Logger]
+  end
+
+  subgraph Zone3[Trust Zone 3: Tooling]
+    AGENTS --> TOOLS[Tool Layer]
+    TOOLS --> CONN[Isolated Connectors]
+  end
+
+  subgraph Zone4[Trust Zone 4: Data]
+    CONN --> SRC[(Legal Archives / Internal Repos)]
+    ORCH --> STORE[(Encrypted Artifact Store)]
+    AUD --> IMM[(Immutable Logs)]
+  end
+
+  POL -.deny by default.-> TOOLS
+```

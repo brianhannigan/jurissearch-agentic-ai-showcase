@@ -1,0 +1,43 @@
+```mermaid
+sequenceDiagram
+  participant User
+  participant Orchestrator
+  participant Intake
+  participant Planner
+  participant RetrievalTools
+  participant Extractor
+  participant Risk
+  participant Composer
+  participant Evaluator
+  participant Human as HITL
+
+  User->>Orchestrator: Submit query + constraints
+  Orchestrator->>Intake: Scope + issue map
+  Intake-->>Orchestrator: Structured scope
+
+  Orchestrator->>Planner: Build retrieval plan
+  Planner-->>Orchestrator: Tool calls requested
+
+  Orchestrator->>RetrievalTools: Retrieve candidate sources
+  RetrievalTools-->>Orchestrator: Documents + provenance
+
+  Orchestrator->>Extractor: Extract holdings/tests/facts/outcomes
+  Extractor-->>Orchestrator: Case cards + citations
+
+  Orchestrator->>Risk: Identify adverse cases + risks
+  Risk-->>Orchestrator: Risk flags + counter map
+
+  Orchestrator->>Composer: Draft briefing + strategy options
+  Composer-->>Orchestrator: Draft output
+
+  Orchestrator->>Evaluator: Claim–citation + policy checks
+  alt Pass
+    Evaluator-->>Orchestrator: Approved + confidence
+    Orchestrator-->>User: Final briefing + evidence trail
+  else Fail / Sensitive
+    Evaluator-->>Orchestrator: Block + reasons
+    Orchestrator-->>HITL: Escalate for review
+    HITL-->>Orchestrator: Approve/Reject/Adjust scope
+    Orchestrator-->>User: Updated output or request clarification
+  end
+```

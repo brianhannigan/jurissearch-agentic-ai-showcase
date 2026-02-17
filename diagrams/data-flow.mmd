@@ -1,0 +1,15 @@
+```mermaid
+flowchart TD
+  Q[User Query + Constraints] --> SCOPE[Scope + Issue Map]
+  SCOPE --> PLAN[Retrieval Plan]
+  PLAN --> RETRIEVE[Retrieve Sources]
+  RETRIEVE --> NORM[Normalize / Parse / OCR]
+  NORM --> EXTRACT[Extract Case Cards]
+  EXTRACT --> CLUSTER[Cluster Rationales + Outcomes]
+  CLUSTER --> RISK[Risk & Counterargument Analysis]
+  RISK --> SYNTH[Synthesize Briefing + Strategy]
+  SYNTH --> EVAL[Evaluate: Claim–Citation + Policy]
+  EVAL -->|Approved| OUT[Deliver Briefing + Evidence Trail]
+  EVAL -->|Blocked| HITL[Human Review / Clarification]
+  HITL --> SCOPE
+```
